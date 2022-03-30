@@ -42,7 +42,7 @@ export default class SpeechInput extends Component<
     // $FlowFixMe We're checking for the existence of the API before
     const recognition = new webkitSpeechRecognition();
     recognition.lang = this.props.language;
-    recognition.continuous = false;
+    recognition.continuous = true;
     recognition.interimResults = true;
     recognition.onstart = this.onRecognitionStart;
     recognition.onerror = this.onRecognitionError;
